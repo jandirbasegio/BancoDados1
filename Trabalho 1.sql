@@ -1,0 +1,29 @@
+-- Comando para dropar(Excluir uma tabela)
+DROP SCHEMA `SYS2402`;
+-- Criando Schema do BD
+CREATE SCHEMA `SYS2402`;
+-- Criando a tabela do BD selecionado
+CREATE TABLE `SYS2402`.`CLIENTES`(
+`ID_CLIENT` INT AUTO_INCREMENT PRIMARY KEY,
+`NAME` VARCHAR (30) NOT NULL,
+`EMAIL` VARCHAR (100) NOT NULL,
+`BIRTH_DATE` DATE NOT NULL,
+`SEX_GENDER` VARCHAR (30) NOT NULL,
+`ZIP_CODE` INT NOT NULL,
+`STREET` VARCHAR (30) NOT NULL,
+`NUMBER` VARCHAR(10) NOT NULL,
+`DISTRICT` VARCHAR (30) NOT NULL,
+`CITY` VARCHAR (30) NOT NULL,
+`UF` CHAR (2) NOT NULL,
+`COUNTRY` VARCHAR (30) NOT NULL,
+`ACTIVE` BIT (1) NULL DEFAULT 1
+);
+-- Inserindo dados na tabela
+INSERT INTO  `SYS2402`.`CLIENTES`(`NAME`,`EMAIL`,`BIRTH_DATE`,`SEX_GENDER`,`ZIP_CODE`,`STREET`,`NUMBER`,`DISTRICT`,`CITY`,`UF`,`COUNTRY`)
+VALUES ('Jandir','jandir@gmail.com','1999-01-21','Masculino','89550000','Rio bonito','S/N','interior','Rio Das Antas','SC','Brasil');
+
+INSERT INTO  `SYS2402`.`CLIENTES`(`NAME`,`EMAIL`,`BIRTH_DATE`,`SEX_GENDER`,`ZIP_CODE`,`STREET`,`NUMBER`,`DISTRICT`,`CITY`,`UF`,`COUNTRY`)
+VALUES ('Jõao','joao@gmail.com','2000-05-10','Masculino','89560000','Rio preto','170','interior','Videira','SC','Brasil');
+
+-- Exibindo/consultando dados da tabela
+SELECT * FROM `SYS2402`.`CLIENTES`;
