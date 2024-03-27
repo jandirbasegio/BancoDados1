@@ -1,0 +1,29 @@
+2 FN
+
+Dependência Funcional:
+
+Sempre que um conjunto de um ou mais atributos determina o valor de outro conjunto de um ou mais atributos. A regra diz que está na 2°FN se e somente se estiver na 1°FN e todo atributo não chave depende funcionalmente de toda chave primária e não apenas de parte dela. Caso seja verificado DF de parte da chave primária, gera-se um tabela que tenha este atributo não chave e essa pare da PK (que se torna agora a PK completa). Se existirem outros atributos não chave com DF dessa mesma PK, esses serão inseridos nesta nova tabela. O resultado dessa etapa é um conjunto de tabelas onde só existem DFs da PK completa. 
+
+Obviamente , tabela com PK simples ou que não possuem atributos não chave já estão automaticamente na 2°FN. Mesmo após a aplicação da 2FN, podem haver ainda problemas de redundância e anomalias de atualização
+
+		NOTA_FISCAL
+
+NRO_NOTA 
+NOME_CLIENTE
+END_CLIENTE
+NM_VENDEDOR, DT_EMISSÃO, VL_TOT_NOTA
+
+
+
+		ITEM_NOTA_FISCAL
+
+NR_NOTA, COD_PRODUTO, QTD_PRODUTO, VL_PRECO, VL_TOTAL
+
+
+
+		PRODUTO
+
+COD_PRODUTO, DESC_PRODUTO, UN_MED, VL_PRODUTO
+
+
+Objetivo da 2FN é evitar que se mantenham informações sobre um conjunto que tem interseção com o conjunto representado na tabela, mas possui existência independente. Além da maior ocupação de espaço, a redundância aumenta a possibilidade de inconsistência.

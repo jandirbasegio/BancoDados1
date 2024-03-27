@@ -1,0 +1,55 @@
+NORMALIZAÇÃO
+
+Serve para analisar tabelas e organiza-las de modo que a sua estrutura sehja simples, relacional e estável, para que o gerenciamento possa ser yambém eficiente e seguro.
+
+-Objetivos são evitar a perda e a repetição de informação e atingir uma forma de representação adequada para oque se deseja armazenar.
+
+-Evitar problemas de redundancia e anomalias de atualização, que podem estar presentes em uma entidade. A solução é a descomposição de uma entidade em uma ou mais entidades, com base na aplicação das formas normais (FN).
+
+É um conjunto de regras que expressam critérios práticos de simplificação de tabelas.
+
+	Nota fiscal
+
+NRO_NOTA
+NOME - CLIENTE ?
+END_CLIENTE ?
+COD_ PRODUTO1
+DESC_PRODUTO1
+QTD_PRODUTO1
+VL_PRODUTO1
+VL_TOT_PRODUTO1
+
+1° FN
+
+Exige que a primeira tabela não tenha alinhamentos(atributos repetitivos)
+Realiza oque chamamos de nivelamento, gerando uma tabela com todos os dados coletados em atributos atômicos.
+
+A PK será formada pela composição de cada PK de cada tabela aninhada, além da PK da tabela externa.
+
+Caso existam atributos multivalorados, este deves se tornar componentes da PK, uma vez que seus  valores estavam associados várias vezes com os demais dados da tabela. se ainda existia aninhamento, provavelmente a 1FN não é o estado final, uma vez que haverá muita redundância dos dados da tabela externa quando se relacionam com o corrências das tabelas internas ou vice-versa.  
+
+Uma tabela esta na 1FN se nenhum dos seus atributos possui domínio multivalorado, ou seja, são eliminados itens repetitivos.
+
+Exemplo:
+
+				Nota fiscal
+
+NRO_NOTA
+NOME_CLIENTE
+END_CLIENTE
+NOME_VENDEDOR
+DATA_EMISSAO
+VALOR TOT_NOTA
+
+		ITEM-NOTA-FISCAL
+
+NRO_NOTA
+COD_PRODUTO
+DESC_PRODUTO
+QTD_PRODUTO
+VL_PRODUTO
+VL_TOTAL
+
+
+
+
