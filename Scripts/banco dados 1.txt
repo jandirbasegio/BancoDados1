@@ -1,0 +1,40 @@
+Banco de dados
+
+Uma coleção logicamente coerente, de dados com determinada significação intriseca, cuja principal finalidade é o armazenamento organizado destas informações, facilitando a entrada, alterações, processamento e a consulta de dados.
+
+Caracteristicas do SGBD 
+
+-Integridade 
+
+	Impedir que determinado código ou chave em uma tabela não tenha correspondêcia em outra.
+
+-Restrição ou Consistência:
+
+	Evitar que um mesmo campo tenha valores diferentes em sitemas diferentes conectdos ao mesmo BD.
+
+-Segurança ou Privacidade:
+
+	Garantir a cada usuário o nível de acesso a ele concedido (leitura, gravação...) a uma tabela ou campo.
+
+
+-Restauração ou reorganização
+
+	Tolerancia a falhas , facilitar a recuperação de falhas de hardware e software com backups e recursos automáticos.
+
+-Não redundante:	 	
+
+	Sem duplicação descontrolada dos dados 
+
+
+
+
+Trabalho: levantamento sobre a história dos bancos de dados e principais modelos,Sendo eles:  hierarquicos, modelos de rede, modelo relacional, modelo orientados a objetos, modelos não relacional.
+
+
+
+
+
+
+
+
+

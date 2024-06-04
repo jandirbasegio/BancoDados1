@@ -1,0 +1,10 @@
+SQL = Structured Query language
+
+DML= Liguagem da manipulação de dados
+
+DQL= Linguagem de consulta de dados
+
+DDL= linguagem de definição de dados
+
+Create Schema: é um DLL 
+
